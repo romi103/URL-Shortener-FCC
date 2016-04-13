@@ -1,0 +1,25 @@
+{
+  "name": "url-shortenere",
+  "version": "1.0.0",
+  "description": "URL Shortener",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Free",
+    "Code",
+    "Camp"
+  ],
+  "author": "Roman Lorent",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "shorturl": "0.0.3"
+  },
+  "devDependencies": {}
+}
