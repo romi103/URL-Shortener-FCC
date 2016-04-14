@@ -14,9 +14,9 @@ app.get("/", function (req, res) {
 });
 
 
-app.get('/:link', function (req, res) {
+app.get('/*', function (req, res) {
 
-    var link = req.params.link;
+    var link = req.params[0];
 
    
     function validateLink(url) {
@@ -29,7 +29,10 @@ app.get('/:link', function (req, res) {
 
     if (validatedLink) {
         shorturl(link, function (result) {
-            res.send(result);
+            
+            
+            //{ "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
+            res.json({original_url:link, short_url:result});
         });
     } else {
         res.send("alert");
