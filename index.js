@@ -35,7 +35,7 @@ app.get('/*', function (req, res) {
             res.json({original_url:link, short_url:result});
         });
     } else {
-        res.send("alert");
+        res.json({original_url:link, short_url:"null"});
     }
 
 
